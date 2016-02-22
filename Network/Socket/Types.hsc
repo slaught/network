@@ -577,8 +577,10 @@ unpackFamily f = case f of
 #ifdef AF_APPLETALK
         (#const AF_APPLETALK) -> AF_APPLETALK
 #endif
+#ifndef AF_NETLINK
 #ifdef AF_ROUTE
         (#const AF_ROUTE) -> AF_ROUTE
+#endif
 #endif
 #ifdef AF_NETBIOS
         (#const AF_NETBIOS) -> AF_NETBIOS
